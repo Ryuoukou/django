@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'firstapp/css/firstapp.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+</head>
+<body>
+    <aside>
+       <img src="{% static 'firstapp/img/i (1).jpg' %}" alt="Первый пробный сайт на Django">
+       <span class="logo">" Ryuouko</span>
+       <h3> Навигация </h3>
+       <ul>
+           <a href=''><li><i class="far fa-home"></i>Главная</li></a>
+           <a href=''><li><i class="fab fa-weixin"></i>Про нас</li></a>
+           <a href=''><li><i class="fas fa-id-card"></i>Контакты</li></a>
+       </ul>
+    </aside>
+    <main>
+        {% block main%}
+    {% endblock %}
+    </main>
+</body>
+</html>
